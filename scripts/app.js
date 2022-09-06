@@ -1,7 +1,7 @@
 console.log('Yo')
 
 const board = document.querySelector('#board')
-const colors = ['white']
+const colors = ['whitesmoke', '#CA25C1', '#CA2119', '#CAC13F', '#24CA35']
 const SQUARES_NUMBER = 800
 
 for (let i = 0; i < SQUARES_NUMBER; i++) {
@@ -20,8 +20,9 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
 }
 
 function setColor(element) {
-    element.style.backgroundColor = getRandomColor()
-    element.style.boxShadow = `0 0 2px ${getRandomColor}, 0 0 10px ${getRandomColor}`
+    const color = getRandomColor()
+    element.style.backgroundColor = color
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }
 
 function removeColor (element) {
@@ -33,5 +34,3 @@ function getRandomColor() {
     const index = Math.floor(Math.random() * colors.length)
     return colors[index]
 }
-
-//
